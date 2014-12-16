@@ -60,6 +60,7 @@ function bci( msg ) {
             rate = json.bpi.USD.rate;
             currencyType = "US Dollar";
             message = firstStr + desc + secondStr + rate + " " + currencyType +" " + thirdStr;
+            msg.send( updateMsg );
             break;
 
           case "gbp":
@@ -69,6 +70,7 @@ function bci( msg ) {
             rate = json.bpi.GBP.rate;
             currencyType = "British Pound Sterling";
             message = firstStr + desc + secondStr + rate + " " + currencyType +" " + thirdStr;
+            msg.send( updateMsg );
             break;
 
           case "eur":
@@ -78,6 +80,7 @@ function bci( msg ) {
             rate = json.bpi.EUR.rate;
             currencyType = "euros";
             message = firstStr + desc + secondStr + rate + " " + currencyType +" " + thirdStr;
+            msg.send( updateMsg );
             break;
 
           default:
@@ -90,7 +93,7 @@ function bci( msg ) {
         }// ...Succesfully printed the message in the correct currency format.
 
         msg.send( message );
-        msg.send( updateMsg );
+
 
       } else {
         // *** The api is not responding ***
