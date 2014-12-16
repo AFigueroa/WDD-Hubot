@@ -8,7 +8,7 @@
 // None
 //
 // Commands:
-// Hubot show bitcoin in <currencyType> - This command will show the users the currenct going rate for a bitcoin. The user specifies which currency they want the rate to appear in.
+// Hubot show bitcoin in <currencyType> - This command will show the users the current going rate for a bitcoin. The user specifies which currency they want the rate to appear in.
 //
 // Author:
 // Antonio J. Figueroa
@@ -59,7 +59,7 @@ function bci( msg ) {
             desc = json.bpi.USD.description;
             rate = json.bpi.USD.rate;
             currencyType = "US Dollar";
-            message = firstStr + desc + secondStr + rate + " " + currencyType +" " + thirdStr;
+            message = firstStr + desc + secondStr + rate + " " + currencyType + " " + thirdStr;
             msg.send( updateMsg );
             break;
 
@@ -69,7 +69,7 @@ function bci( msg ) {
             desc = json.bpi.GBP.description;
             rate = json.bpi.GBP.rate;
             currencyType = "British Pound Sterling";
-            message = firstStr + desc + secondStr + rate + " " + currencyType +" " + thirdStr;
+            message = firstStr + desc + secondStr + rate + " " + currencyType + " " + thirdStr;
             msg.send( updateMsg );
             break;
 
@@ -79,7 +79,7 @@ function bci( msg ) {
             desc = json.bpi.EUR.description;
             rate = json.bpi.EUR.rate;
             currencyType = "euros";
-            message = firstStr + desc + secondStr + rate + " " + currencyType +" " + thirdStr;
+            message = firstStr + desc + secondStr + rate + " " + currencyType + " " + thirdStr;
             msg.send( updateMsg );
             break;
 
