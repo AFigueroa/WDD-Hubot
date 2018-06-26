@@ -69,7 +69,6 @@
       "name": "Bobby Newland",
       "github": "https://github.com/bmoney974"
     }
-
   ],
   "keywords": [
     "github",
@@ -99,10 +98,16 @@
     "hubot-slack": "~2.0.4",
     "mathjs": "^1.0.1",
     "numeral": "^1.5.3",
-    "request": "~2.34.0"
+    "request": "~2.50.0",
+    "snyk": "^1.85.0"
   },
   "engines": {
     "node": ">= 0.8.x",
     "npm": ">= 1.1.x"
-  }
+  },
+  "scripts": {
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
+  },
+  "snyk": true
 }
