@@ -69,7 +69,6 @@
       "name": "Bobby Newland",
       "github": "https://github.com/bmoney974"
     }
-
   ],
   "keywords": [
     "github",
@@ -91,18 +90,24 @@
   "dependencies": {
     "MD5": "^1.2.1",
     "async": "^0.9.0",
-    "cheerio": "~0.15.0",
+    "cheerio": "~0.20.0",
     "cleverbot-node": "~0.1.6",
     "ent": "~2.0.0",
-    "hubot": ">= 2.6.0 < 3.0.0",
+    "hubot": ">=3.1.0",
     "hubot-scripts": ">= 2.5.0 < 3.0.0",
     "hubot-slack": "~2.0.4",
-    "mathjs": "^1.0.1",
+    "mathjs": "^7.5.1",
     "numeral": "^1.5.3",
-    "request": "~2.34.0"
+    "request": "~2.87.0",
+    "@snyk/protect": "latest"
   },
   "engines": {
     "node": ">= 0.8.x",
     "npm": ">= 1.1.x"
-  }
+  },
+  "scripts": {
+    "prepublish": "npm run snyk-protect",
+    "snyk-protect": "snyk-protect"
+  },
+  "snyk": true
 }
